@@ -6,12 +6,16 @@ body {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    align-items: flex-start; /* Cambia align-items a flex-start */
+    min-height: 100vh; /* Usa min-height en lugar de height */
     text-align: center;
+    overflow-x: hidden; /* Evita el scroll horizontal si no es necesario */
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 90%;
     max-width: 400px;
     background-image: url("img/fondo.png");
@@ -20,31 +24,32 @@ body {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Asegura un espacio bajo el contenedor si se hace scroll */
 }
 
 .logo {
     width: 100px; /* Tamaño reducido para móviles */
     margin-bottom: 20px;
+    flex-shrink: 0; /* Evita que el logo se encoja */
 }
 
 .links {
-    margin-bottom: 20px;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 20px; /* Espacio entre botones */
     align-items: center;
 }
 
 .link {
-    width: 80%; /* Más ancho en móviles */
-    padding: 8px 12px;
+    width: 70%;
+    padding: 10px;
     background-color: #d63f7e;
     color: #fff;
     text-decoration: none;
     border-radius: 10px;
     font-weight: bold;
     text-align: center;
-    margin: 10px 0;
-    max-width: 250px; /* Máximo ancho para evitar deformaciones */
 }
 
 .link:hover {
@@ -61,9 +66,19 @@ a.link.disabled {
 
 .social-icons {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 20px; /* Espacio entre íconos */
+    flex-wrap: wrap; /* Permite que los íconos se muevan a la siguiente línea si no hay espacio suficiente */
 }
-
+.subtitle {
+    margin-top: 40px; /* Separación con el subtítulo */
+    margin: 20px 0; /* Espaciado arriba y abajo del texto */
+    color: #fff;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
+    display: block; /* Asegura que el subtítulo ocupe toda la línea */
+}
 .social-icons img {
     width: 30px;
     height: 30px;
@@ -86,6 +101,6 @@ a.link.disabled {
     }
 
     .link {
-        width: 50%; /* Un poco más estrecho en pantallas grandes */
+        width: 65%; /* Un poco más estrecho en pantallas grandes */
     }
 }
