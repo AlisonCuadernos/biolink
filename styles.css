@@ -1,0 +1,91 @@
+/* Estilo base - móviles por defecto */
+body {
+    background-color: #f8e8f0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    background-image: url("img/fondo.png");
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 100px; /* Tamaño reducido para móviles */
+    margin-bottom: 20px;
+}
+
+.links {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.link {
+    width: 80%; /* Más ancho en móviles */
+    padding: 8px 12px;
+    background-color: #d63f7e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    max-width: 250px; /* Máximo ancho para evitar deformaciones */
+}
+
+.link:hover {
+    background-color: #b03164;
+}
+
+a.link.disabled {
+    background-color: #f8e8f0; /* Color de fondo diferente */
+    color: #666; /* Color de texto diferente */
+    pointer-events: none; /* Deshabilitar eventos de clic */
+    cursor: not-allowed; /* Mostrar cursor de no permitido */
+    opacity: 0.6; /* Hacer que se vea más tenue */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Media Queries para tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .logo {
+        width: 120px;
+    }
+
+    .link {
+        width: 60%; /* Estilo original para pantallas más grandes */
+    }
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        width: 150px;
+    }
+
+    .link {
+        width: 50%; /* Un poco más estrecho en pantallas grandes */
+    }
+}
