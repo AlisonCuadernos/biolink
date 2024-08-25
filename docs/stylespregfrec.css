@@ -5,12 +5,12 @@ body {
     padding: 0;
     min-height: 100vh; /* Usa min-height en lugar de height */
     overflow-x: hidden; /* Evita el scroll horizontal si no es necesario */
+    max-width: 200px;
 }
 
 h1{
     color: deeppink;
-    width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
-    display: block; /* Asegura que el subtítulo ocupe toda la línea */
+    font-size: 1.2rem;
 }
 
 p{
@@ -19,16 +19,18 @@ p{
 }
 
 .container{
+    
     padding-top: 20px;
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 30%;
+    padding-left: 5vh;
+    justify-content: center; /* Centra los íconos horizontalmente */
     gap: 45px; /* Espacio entre botones */
 }
 
 .logo {
-    width: 100px; /* Tamaño reducido para móviles */
+    width: 80px; /* Tamaño reducido para móviles */
     flex-shrink: 0; /* Evita que el logo se encoja */
 }
 
@@ -38,10 +40,17 @@ p{
         width: 100px;
     }
 
+    .container{
+        max-width: 1200px;
+    }
+
 }
 
 @media (min-width: 1024px) {
     .logo {
         width: 120px;
+    }
+    .container{
+        max-width: 1400px;
     }
 }
