@@ -1,0 +1,47 @@
+body {
+    background-color: #f8e8f0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Usa min-height en lugar de height */
+    overflow-x: hidden; /* Evita el scroll horizontal si no es necesario */
+}
+
+h1{
+    color: deeppink;
+    width: 100%; /* Asegura que ocupe el ancho completo del contenedor */
+    display: block; /* Asegura que el subtítulo ocupe toda la línea */
+}
+
+p{
+    color:hotpink;
+    padding: 20px;
+}
+
+.container{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 30%;
+    gap: 45px; /* Espacio entre botones */
+}
+
+.logo {
+    width: 100px; /* Tamaño reducido para móviles */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+/* Media Queries para tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .logo {
+        width: 100px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .logo {
+        width: 120px;
+    }
+}
