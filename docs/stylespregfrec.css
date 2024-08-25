@@ -5,7 +5,6 @@ body {
     padding: 0;
     min-height: 100vh; /* Usa min-height en lugar de height */
     overflow-x: hidden; /* Evita el scroll horizontal si no es necesario */
-    max-width: 200px;
 }
 
 h1{
@@ -16,10 +15,11 @@ h1{
 p{
     color:hotpink;
     padding: 20px;
+    max-width: 200px;
 }
 
 .container{
-    
+    max-width: 200px;
     padding-top: 20px;
     display: flex;
     flex-direction: row;
@@ -43,7 +43,9 @@ p{
     .container{
         max-width: 1200px;
     }
-
+    p{
+        max-width: 1200px;
+    }
 }
 
 @media (min-width: 1024px) {
@@ -51,6 +53,9 @@ p{
         width: 120px;
     }
     .container{
+        max-width: 1400px;
+    }
+    p{
         max-width: 1400px;
     }
 }
