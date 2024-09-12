@@ -1,0 +1,4 @@
+.responsive-iframe {
+    width: 100vw; /* 100% del ancho de la pantalla */
+    height: 100vh; /* 50% del alto de la pantalla */
+  }
