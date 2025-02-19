@@ -1,0 +1,74 @@
+body {
+    background-color: #f8c6da;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+.event-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+.event-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    width: 319px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: relative;
+}
+.event-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.event-info {
+    display: none;
+    text-align: left;
+    position: absolute;
+    background: white;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+.logo {
+    width: 80px; /* Tamaño reducido para móviles */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.container2{
+    max-width: 200px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5vh;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 45px; /* Espacio entre botones */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .event-card {
+        width: 90%;
+    }
+}
