@@ -29,9 +29,10 @@ body {
     object-fit: cover;
     border-radius: 10px;
 }
-.event-info {
+/*.event-info {
     display: none;
     text-align: left;
+    font-size: 16px;
     position: absolute;
     background: #ffecf6;
     width: 100%;
@@ -39,7 +40,7 @@ body {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-}
+}*/
 .close-btn {
     position: absolute;
     top: 10px;
@@ -74,9 +75,52 @@ body {
 
 }
 
+.event-info {
+    display: none;
+    text-align: left;
+    font-size: 16px;
+    position: absolute;
+    background: #ffecf6;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Separa contenido y footer */
+}
+
+/*.event-content {
+    flex: 1;
+    overflow-y: auto;
+}*/
+
+.social-icons {
+    text-align: right;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .event-card {
         width: 100%;
+    }
+
+    .event-info {
+        padding: 10px;
+        font-size: 14px;
     }
 }
