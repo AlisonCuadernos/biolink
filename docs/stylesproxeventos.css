@@ -61,14 +61,23 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding-left: 5vh;
+    /*padding-left: 5vh;**/
     justify-content: center; /* Centra los íconos horizontalmente */
     gap: 45px; /* Espacio entre botones */
 }
+
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .event-card {
         width: 90%;
     }
+}
+
+.biolink{
+    color: #ec1588;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+
 }
