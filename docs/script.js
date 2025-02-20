@@ -1,3 +1,4 @@
+//Proximos eventos
 function showEventInfo(eventCard) {
     let image = eventCard.querySelector("img");
     let info = eventCard.querySelector(".event-info");
@@ -18,4 +19,25 @@ function hideEventInfo(event, closeButton) {
     // Volver a mostrar la imagen y ocultar la info
     image.style.display = "block";
     info.style.display = "none";
+}
+
+//Preguntas frecuentes
+fetch('preguntas-frecuentes.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('faq-content').innerHTML = data;
+            })
+            .catch(error => console.error('Error al cargar las preguntas frecuentes:', error));
+
+function toggleFAQ(element) {
+    let answer = element.nextElementSibling;
+    let arrow = element.querySelector('.arrow');
+
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+        arrow.classList.remove('rotate');
+    } else {
+        answer.style.display = "block";
+        arrow.classList.add('rotate');
+    }
 }

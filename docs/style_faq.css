@@ -1,0 +1,81 @@
+body {
+    background-color: #ffe3f1;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+.faq-container {
+    max-width: 800px; /* Ajusta el ancho máximo */
+    margin: 0 auto;   /* Centra el contenedor */
+    text-align: left; /* Evita que el texto quede alineado al centro */
+}
+
+.faq-item {
+    background: #ffc0dd;
+    color: #e6007e;
+    padding: 3px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;  /* En lugar de width: 800px */
+    width: 100%;       /* O ajustarlo según lo necesites */
+}
+
+.faq-item:hover {
+    background: #ff9bc7;
+}
+
+.faq-answer {
+    display: none;
+    background: #ffb3da;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-weight: normal;
+    width: 100%; /* Que coincida con .faq-item */
+    max-width: 100%; /* Para que no sobrepase el contenedor */
+    /*margin: auto; /* Para centrarlo */*/
+    text-align: left; /* Mejor alineación del texto */
+}
+
+.faq-item, .faq-answer {
+    box-sizing: border-box;
+}
+
+.arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.logo {
+    width: 80px; /* Tamaño reducido para móviles */
+    flex-shrink: 0; /* Evita que el logo se encoja */
+}
+
+.container2{
+    max-width: 200px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*padding-left: 5vh;**/
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 45px; /* Espacio entre botones */
+}
+
+.biolink{
+    color: #ec1588;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+
+}
