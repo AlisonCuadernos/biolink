@@ -30,31 +30,24 @@ body {
     background: #ff9bc7;
 }
 
+
 .faq-answer {
     display: none;
-    background: #ffb3da;
+    width: 100%;
+    max-width: 100%; /* Ajusta según el diseño */
+    box-sizing: border-box;
+    overflow-wrap: break-word; /* Corta palabras largas */
+    word-break: break-word; /* Evita desbordes */
     padding: 10px;
     border-radius: 10px;
-    margin-top: 5px;
-    font-weight: normal;
-    width: 100%; /* Que coincida con .faq-item */
-    max-width: 100%; /* Para que no sobrepase el contenedor */
-    /*margin: auto; /* Para centrarlo */*/
-    text-align: left; /* Mejor alineación del texto */
+    background-color: #ffb3da;
 }
 
 .faq-item, .faq-answer {
     box-sizing: border-box;
 }
 
-.arrow {
-    font-size: 18px;
-    transition: transform 0.3s ease-in-out;
-}
 
-.rotate {
-    transform: rotate(180deg);
-}
 
 .logo {
     width: 80px; /* Tamaño reducido para móviles */
@@ -67,7 +60,6 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    /*padding-left: 5vh;**/
     justify-content: center; /* Centra los íconos horizontalmente */
     gap: 45px; /* Espacio entre botones */
 }
@@ -78,4 +70,22 @@ body {
     font-weight: bold;
     text-align: center;
 
+}
+
+@media (max-width: 768px) {
+    .faq-answer {
+        display: none;
+        max-width: 100%;
+        font-size: 14px; /* Reduce tamaño en móviles */
+    }
+}
+
+
+.arrow {
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
 }
