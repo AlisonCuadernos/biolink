@@ -289,6 +289,122 @@ button:hover {
   color: #fff;
 }
 
+/* Banner Carrusel */
+.banner-carrusel {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 28px auto;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-slides {
+  width: 100%;
+  display: flex;
+  transition: transform 0.5s;
+}
+
+.banner-slide {
+  min-width: 100%;
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.banner-slide.active {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+
+.banner-slide img {
+  width: 100%;
+  max-height: 960px;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+  display: block;
+}
+
+.banner-texto {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: bold;
+  text-shadow: 0 2px 8px #0008;
+  background: linear-gradient(180deg, transparent 60%, #0006 100%);
+  padding: 18px 0 12px 0;
+  border-radius: 0 0 18px 18px;
+  z-index: 3;
+}
+
+.banner-flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff8;
+  border: none;
+  font-size: 2.2em;
+  color: #a03e8b;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner-flecha:hover {
+  background: #e0c6e6;
+  color: #fff;
+}
+#banner-prev { left: 12px; }
+#banner-next { right: 12px; }
+
+.banner-puntos {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 11;
+}
+.banner-puntos span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: #fff8;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #a03e8b;
+  transition: background 0.2s, border 0.2s;
+}
+.banner-puntos .activo {
+  background: #a03e8b;
+  border-color: #fff;
+}
+
 /* responsive  */
 @media (max-width: 720px) {
   .header-controls input {

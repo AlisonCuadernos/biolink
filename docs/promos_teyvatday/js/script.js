@@ -490,3 +490,39 @@ function actualizarStockVariacion(productoId) {
   // **Actualiza el precio**
   document.getElementById(`precio-detalle-${productoId}`).innerText = `Precio: $${variacion.precio || producto.precio}`;
 }
+
+// Carrusel Banner
+document.addEventListener('DOMContentLoaded', () => {
+  const slides = document.querySelectorAll('.banner-slide');
+  const puntosCont = document.getElementById('banner-puntos');
+  let actual = 0;
+
+  // Crear puntos
+  slides.forEach((_, i) => {
+    const punto = document.createElement('span');
+    punto.onclick = () => mostrarSlide(i);
+    puntosCont.appendChild(punto);
+  });
+
+  function mostrarSlide(idx) {
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === idx);
+      puntosCont.children[i].classList.toggle('activo', i === idx);
+    });
+    actual = idx;
+  }
+
+  document.getElementById('banner-prev').onclick = () => {
+    mostrarSlide((actual - 1 + slides.length) % slides.length);
+  };
+  document.getElementById('banner-next').onclick = () => {
+    mostrarSlide((actual + 1) % slides.length);
+  };
+
+  mostrarSlide(0);
+
+  // Auto-avance cada 6 segundos
+  setInterval(() => {
+    mostrarSlide((actual + 1) % slides.length);
+  }, 6000);
+});
